@@ -124,7 +124,8 @@ body{
     font-weight: 200;
     font-family: Josefin sans;
     font-weight: bolder;
-    background: url(https://media.discordapp.net/attachments/725117549867565148/1104865883496656906/AFGJ81r6Ai_bxZzhzxarouUxuhviR7ICg8V3xNerCyUCixAtM_mlik2iYCvg7ohdG4rHGyWo_fNZab9xLIzsymkNoogWHoSB2ww3740-h1624.png?width=702&height=468); /*HEADER BACKGROUND IMAGE*/
+    /*background: url(https://media.discordapp.net/attachments/725117549867565148/1104865883496656906/AFGJ81r6Ai_bxZzhzxarouUxuhviR7ICg8V3xNerCyUCixAtM_mlik2iYCvg7ohdG4rHGyWo_fNZab9xLIzsymkNoogWHoSB2ww3740-h1624.png?width=702&height=468); /*HEADER BACKGROUND IMAGE*/
+    background: url(images/video_presnetation_sans_txt.mp4);
     background-position: center;
     background-size: cover;
 }
@@ -195,8 +196,8 @@ a{
     transition: 0.8s;
 }
 .text.reveal , .text-scroll.reveal{
-    /*color: rgb(240,240,240);*/
-    color :  rgb(180, 17, 17);
+    color: rgb(240,240,240);
+   /* color :  rgb(180, 17, 17);*/
     font-style: bold;
     animation: revealTextAnimation 0.80s ease forwards;
     text-shadow: 0px 0px 2px rgb(0,0,0);
