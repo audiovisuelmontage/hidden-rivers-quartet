@@ -1,14 +1,19 @@
+.carousel-and-medias {
+    display: flex;
+    align-items: center;
+}
+
 .carousel {
     position: relative;
     border-radius: 60%;
     width: 24.8%;
-    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    height: 400px; /* Ajuster la hauteur */
     margin-left: 8%;
     overflow: hidden;
     z-index: 0;
-  }
-  
-  .slide {
+}
+
+.slide {
     position: absolute;
     top: 0;
     bottom: 40;
@@ -18,22 +23,169 @@
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease;
-    
-  }
-  
-  .slide.active {
+}
+
+.slide.active {
     opacity: 1;
-  }
-  
-  @keyframes carouselAnimation {
+}
+
+.medias {
+    margin-left: 16%; /* Ajuster la marge  */
+    display: flex;
+    align-items: center;
+}
+
+.medias ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.medias li {
+    margin-right: 60%; /* Ajuster la marge entre les éléments */
+}
+
+.medias a {
+    display: inline-block;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+    font-size: 4rem; /* Ajuster la police  */
+}
+
+.medias a:hover {
+    transform: scale(1.2);
+}
+
+.text.reveal .bi {
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.text.reveal .bi::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-style: bold;
+    animation: revealTextAnimation 0.8s ease forwards;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text.reveal:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    animation: blockRevealAnimation 1.2s ease forwards;
+}
+
+@keyframes blockRevealAnimation {
     0% {
-      opacity: 0;
+        left: -100%;
     }
-    33% {
-      opacity: 1;
+    40% {
+        left: 0;
+    }
+    60% {
+        left: 0.4;
     }
     100% {
-      opacity: 0;
+        left: 100%;
+    }
+}
+
+@keyframes revealTextAnimation {
+    0% {
+        color: transparent;
+    }
+    40% {
+        color: transparent;
+    }
+    60% {
+        color: inherit;
+    }
+}
+
+.text.reveal .icon-color {
+    color: #7289DA; 
+}
+
+.text.reveal .icon-color.bi-youtube {
+    color: #FF0000; 
+}
+
+.text.reveal .icon-color.bi-instagram {
+    color: #E4405F; 
+}
+
+.text.reveal .icon-color.bi-at {
+    color: #FFFFFF; 
+}
+
+
+  
+  /* Styles pour les écrans moyens */
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    .carousel-and-medias {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel {
+      width: 60%;
+      height: 400px;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .medias {
+      margin-left: 0;
+    }
+  
+    .medias li {
+      margin-right: 40px;
+    }
+  
+    .medias a {
+      font-size: 2.5rem;
     }
   }
   
+  /* Styles pour les écrans plus petits */
+  @media screen and (max-width: 767px) {
+    .carousel-and-medias {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel {
+      width: 80%;
+      height: 300px;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .medias {
+      margin-left: 0;
+    }
+  
+    .medias li {
+      margin-right: 20px;
+    }
+  
+    .medias a {
+      font-size: 2rem;
+    }
+  }

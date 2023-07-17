@@ -22,7 +22,7 @@
 }
 
 .text.reveal:before {
-    /*background: rgb(0, 201, 252);*/
+  
     animation: blockRevealAnimation 1.2s ease forwards;
 }
 
@@ -68,4 +68,5 @@
 .text.reveal .icon-color.bi-at {
     color: #FFFFFF; 
 }
+
 
