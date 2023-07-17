@@ -1,28 +1,39 @@
-  .contact-head {
+.carousel {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10%;
+    border-radius: 60%;
+    width: 24.8%;
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    margin-left: 8%;
+    overflow: hidden;
     z-index: 0;
   }
-  .decoration {
+  
+  .slide {
     position: absolute;
     top: 0;
-
-    left: 18%;
-    
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-  }
-  
-  .bulle {
+    bottom: 40;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  @keyframes carouselAnimation {
+    0% {
+      opacity: 0;
+    }
+    33% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
   
