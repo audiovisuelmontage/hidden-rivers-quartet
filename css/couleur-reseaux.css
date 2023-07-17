@@ -1,0 +1,71 @@
+.text .bi {
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.text.reveal .bi {
+    font-size: 2rem;
+    font-style: bold;
+    animation: revealTextAnimation 0.8s ease forwards;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.text.reveal:before {
+    /*background: rgb(0, 201, 252);*/
+    animation: blockRevealAnimation 1.2s ease forwards;
+}
+
+@keyframes blockRevealAnimation {
+    0% {
+        left: -100%;
+    }
+    40% {
+        left: 0;
+    }
+    60% {
+        left: 0.4;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes revealTextAnimation {
+    0% {
+        color: transparent;
+    }
+    40% {
+        color: transparent;
+    }
+    60% {
+        color: inherit;
+    }
+}
+
+.text.reveal .icon-color {
+    color: #7289DA; 
+}
+
+.text.reveal .icon-color.bi-youtube {
+    color: #FF0000; 
+}
+
+.text.reveal .icon-color.bi-instagram {
+    color: #E4405F; 
+}
+
+.text.reveal .icon-color.bi-at {
+    color: #FFFFFF; 
+}
+
