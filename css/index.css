@@ -1214,7 +1214,7 @@ CONTACT ONE
     font-size: 18px;
     color: rgb(240,240,240,.8);
     font-family: camel;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 #contact-one #form textarea{
   height: 100px;
