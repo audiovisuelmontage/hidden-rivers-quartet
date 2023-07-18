@@ -217,7 +217,7 @@ $(".navigation-content ul li a").hover(function(e) {
 
                 songtoplay.classList.remove('playing')
             
-                this.src="images/play.png";
+                this.src="../images/play.png";
 
                 var sondindicator = document.querySelectorAll('.music-indicator-span');
 
@@ -239,7 +239,7 @@ $(".navigation-content ul li a").hover(function(e) {
                        
     
                     var playingsymbol = document.querySelectorAll('.playing-symbol')
-                        playingsymbol.forEach(a=>a.src="images/play.png");
+                        playingsymbol.forEach(a=>a.src="../images/play.png");
                         playingsymbol.forEach(a=>a.classList.remove('playing-symbol'));
                 }
 
@@ -254,7 +254,7 @@ $(".navigation-content ul li a").hover(function(e) {
                 songtoplay.classList.add('playing')
                 this.classList.add('playing-symbol')
 
-                this.src="images/pause.png";
+                this.src="../images/pause.png";
             
             }
         })
