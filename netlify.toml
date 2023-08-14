@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "https://birds-audiovisuel.fr/errors/404.html"
+  to = "https://birds-audiovisuel.fr/errors/"
   status = 404
